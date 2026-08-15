@@ -319,6 +319,14 @@ body {
   letter-spacing: 0.05em;
 }
 
+.proj-desc-mini {
+  font-family: var(--font-mono);
+  font-size: 0.5625rem;
+  font-weight: 900;
+  letter-spacing: 0.06em;
+  margin-top: 0.15rem;
+}
+
 .project-thumb-compact {
   width: 100px;
   height: 48px;
@@ -884,4 +892,76 @@ body {
 .nav-oval-item:hover .nav-tooltip {
   opacity: 1;
   transform: translateY(-50%) translateX(0);
+}
+
+/* Achievements & Honors Section */
+.achievements-card {
+  width: 100%;
+}
+
+.achievements-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+@media (min-width: 768px) {
+  .achievements-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.achievement-item {
+  display: grid;
+  grid-template-columns: 35px 1fr auto;
+  gap: 1rem;
+  align-items: center;
+  border: 1px solid var(--border-acid);
+  background-color: #0c0e0b;
+  padding: 1rem 1.25rem;
+  transition: border-color 0.2s, background-color 0.2s, transform 0.2s;
+}
+
+.achievement-item:hover {
+  border-color: var(--acid-green);
+  background-color: #11140f;
+  transform: translateY(-2px);
+}
+
+.ach-num {
+  font-family: var(--font-bebas);
+  font-size: 2rem;
+  color: var(--acid-green);
+  line-height: 1;
+}
+
+.ach-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.ach-title {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 900;
+  color: var(--text-white);
+  letter-spacing: 0.05em;
+}
+
+.ach-desc {
+  font-family: var(--font-mono);
+  font-size: 0.625rem;
+  color: #8a8f80;
+  line-height: 1.4;
+}
+
+.ach-tag {
+  font-family: var(--font-mono);
+  font-size: 0.5625rem;
+  font-weight: 900;
+  border: 1px solid var(--acid-green);
+  padding: 0.25rem 0.5rem;
+  letter-spacing: 0.08em;
+  white-space: nowrap;
 }
