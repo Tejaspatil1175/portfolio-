@@ -169,11 +169,11 @@ body {
     width: 100%;
     max-width: 100%;
     height: auto;
-    min-height: 100vh;
-    min-height: 100dvh;
+    min-height: auto;
+    max-height: none;
     display: block;
     background-color: var(--bg-card);
-    overflow: hidden;
+    overflow: visible;
     padding: 0;
     margin: 0;
   }
@@ -187,7 +187,7 @@ body {
     width: 100%;
     max-width: 100%;
     height: auto;
-    object-fit: cover;
+    object-fit: fill;
     object-position: top center;
     image-rendering: auto;
     image-rendering: smooth;
