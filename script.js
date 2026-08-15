@@ -67,4 +67,38 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
+  // 4. SCROLL SPY FOR DESKTOP OVAL NAVBAR
+  const ovalNavItems = document.querySelectorAll(".nav-oval-item[href]");
+  const sections = document.querySelectorAll("section[id]");
+
+  function updateScrollSpy() {
+    let currentSectionId = "hero";
+    sections.forEach(section => {
+      const sectionTop = section.offsetTop - 150;
+      if (window.scrollY >= sectionTop) {
+        currentSectionId = section.getAttribute("id");
+      }
+    });
+
+    ovalNavItems.forEach(item => {
+      const itemHref = item.getAttribute("href");
+      if (itemHref === `#${currentSectionId}`) {
+        item.classList.add("active");
+      } else {
+        item.classList.remove("active");
+      }
+    });
+  }
+
+  // 5. CLICK TOGGLE FOR DESKTOP OVAL NAVBAR
+  const ovalNavToggle = document.getElementById("oval-nav-toggle");
+  const desktopOvalNavbar = document.getElementById("desktop-oval-navbar");
+
+  if (ovalNavToggle && desktopOvalNavbar) {
+    ovalNavToggle.addEventListener("click", (e) => {
+      e.stopPropagation();
+      desktopOvalNavbar.classList.toggle("expanded");
+    });
+  }
+
 });

@@ -18,9 +18,6 @@
 <body class="acid-noise">
 
   <!-- ==================================================================== -->
-  <!-- FULL SCREEN HERO SECTION (EXACT HERO REFERENCE IMAGES)               -->
-  <!-- ==================================================================== -->
-  <!-- ==================================================================== -->
   <!-- FULL SCREEN HERO SECTION (PROTECTED & INTERACTIVE CANVAS)            -->
   <!-- ==================================================================== -->
   <section id="hero" class="hero-section" oncontextmenu="return false;" onselectstart="return false;">
@@ -29,6 +26,53 @@
     
     <!-- Mobile Hero Artwork -->
     <img src="assets/mobile-hero-ref.png" alt="Tejas Patil — Hero Section" class="hero-img mobile-hero" draggable="false" ondragstart="return false;" oncontextmenu="return false;" />
+
+    <!-- Desktop Floating Oval Right Navbar (Expandable on Hover / Click) -->
+    <nav class="desktop-oval-navbar collapsed" id="desktop-oval-navbar" aria-label="Desktop Hero Navigation">
+      <div class="oval-nav-container">
+        <!-- Compact Toggle Trigger Header -->
+        <button class="oval-nav-toggle" id="oval-nav-toggle" title="Toggle Navigation">
+          <span class="toggle-icon">›</span>
+          <span class="toggle-badge">MENU</span>
+        </button>
+
+        <!-- Expandable Menu Links List -->
+        <div class="oval-nav-menu">
+          <!-- Home Link -->
+          <a href="#hero" class="nav-oval-item active" title="Home">
+            <span class="nav-icon">⌂</span>
+            <span class="nav-tooltip">HOME</span>
+          </a>
+
+          <!-- Projects Link -->
+          <a href="#projects" class="nav-oval-item" title="Projects">
+            <span class="nav-icon">⊞</span>
+            <span class="nav-tooltip">PROJECTS</span>
+          </a>
+
+          <!-- Process Link -->
+          <a href="#process" class="nav-oval-item" title="Process">
+            <span class="nav-icon">⚡</span>
+            <span class="nav-tooltip">PROCESS</span>
+          </a>
+
+          <!-- Contact Link -->
+          <a href="#contact" class="nav-oval-item" title="Contact">
+            <span class="nav-icon">✉</span>
+            <span class="nav-tooltip">CONTACT</span>
+          </a>
+
+          <!-- Divider -->
+          <div class="nav-oval-divider"></div>
+
+          <!-- Quick Copy Email Trigger -->
+          <button class="nav-oval-item copy-email-trigger" title="Copy Email">
+            <span class="nav-icon text-acid">✦</span>
+            <span class="nav-tooltip">COPY EMAIL</span>
+          </button>
+        </div>
+      </div>
+    </nav>
 
     <!-- Interactive Hero Hotspots Overlay -->
     <div class="hero-interactive-overlay">
