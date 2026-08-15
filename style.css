@@ -167,13 +167,16 @@ body {
 @media (max-width: 767px) {
   .hero-section {
     width: 100%;
-    height: auto;
-    min-height: 100vh;
+    height: 100dvh;
     min-height: 100dvh;
+    max-height: 100dvh;
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     justify-content: center;
-    background-color: var(--bg-dark);
+    background-color: var(--bg-card);
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
   }
 
   .desktop-hero {
@@ -183,10 +186,14 @@ body {
   .mobile-hero {
     display: block;
     width: 100%;
-    height: auto;
+    height: 100%;
     max-width: 100%;
-    object-fit: cover;
-    object-position: top center;
+    max-height: 100dvh;
+    object-fit: contain;
+    object-position: center;
+    image-rendering: auto;
+    image-rendering: smooth;
+    -webkit-font-smoothing: antialiased;
   }
 }
 
