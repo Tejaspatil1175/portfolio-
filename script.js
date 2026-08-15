@@ -5,9 +5,7 @@
 document.addEventListener("DOMContentLoaded", () => {
   
   // 1. COPY EMAIL TO CLIPBOARD
-  const copyEmailBtn = document.getElementById("copy-email-btn");
-  const mainContactBtn = document.getElementById("main-contact-btn");
-  const toast = document.getElementById("toast-notify");
+  const emailTriggers = document.querySelectorAll("#copy-email-btn, #main-contact-btn, .copy-email-trigger");
 
   const emailToCopy = "tejaspatil1175@gmail.com";
 
@@ -24,13 +22,16 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  if (copyEmailBtn) {
-    copyEmailBtn.addEventListener("click", handleCopyEmail);
-  }
+  emailTriggers.forEach(trigger => {
+    trigger.addEventListener("click", handleCopyEmail);
+  });
 
-  if (mainContactBtn) {
-    mainContactBtn.addEventListener("click", handleCopyEmail);
-  }
+  // Prevent image right-click save and dragging
+  const heroImages = document.querySelectorAll(".hero-img");
+  heroImages.forEach(img => {
+    img.addEventListener("contextmenu", (e) => e.preventDefault());
+    img.addEventListener("dragstart", (e) => e.preventDefault());
+  });
 
   // 2. PROJECT FILTER TABS
   const filterBtns = document.querySelectorAll(".filter-btn");

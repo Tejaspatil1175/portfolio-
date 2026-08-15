@@ -20,12 +20,30 @@
   <!-- ==================================================================== -->
   <!-- FULL SCREEN HERO SECTION (EXACT HERO REFERENCE IMAGES)               -->
   <!-- ==================================================================== -->
-  <section id="hero" class="hero-section">
-    <!-- Desktop Hero Reference Image -->
-    <img src="assets/desktop-hero-ref.png" alt="Tejas Patil — Hero Section" class="hero-img desktop-hero" />
+  <!-- ==================================================================== -->
+  <!-- FULL SCREEN HERO SECTION (PROTECTED & INTERACTIVE CANVAS)            -->
+  <!-- ==================================================================== -->
+  <section id="hero" class="hero-section" oncontextmenu="return false;" onselectstart="return false;">
+    <!-- Desktop Hero Artwork -->
+    <img src="assets/desktop-hero-ref.png" alt="Tejas Patil — Hero Section" class="hero-img desktop-hero" draggable="false" ondragstart="return false;" oncontextmenu="return false;" />
     
-    <!-- Mobile Hero Reference Image -->
-    <img src="assets/mobile-hero-ref.png" alt="Tejas Patil — Hero Section" class="hero-img mobile-hero" />
+    <!-- Mobile Hero Artwork -->
+    <img src="assets/mobile-hero-ref.png" alt="Tejas Patil — Hero Section" class="hero-img mobile-hero" draggable="false" ondragstart="return false;" oncontextmenu="return false;" />
+
+    <!-- Interactive Hero Hotspots Overlay -->
+    <div class="hero-interactive-overlay">
+      <!-- Portfolio Explore Hotspot (Left Title Arrow) -->
+      <a href="#projects" class="hero-hotspot hotspot-projects" title="View Projects"></a>
+
+      <!-- Contact Email Hotspot (Bottom Quote CTA) -->
+      <button class="hero-hotspot hotspot-email copy-email-trigger" title="Copy Email: tejaspatil1175@gmail.com"></button>
+
+      <!-- GitHub Hotspot -->
+      <a href="https://github.com/Tejaspatil1175" target="_blank" rel="noreferrer" class="hero-hotspot hotspot-github" title="GitHub Profile"></a>
+
+      <!-- LinkedIn Hotspot -->
+      <a href="https://www.linkedin.com/in/tejaspatil-dev/" target="_blank" rel="noreferrer" class="hero-hotspot hotspot-linkedin" title="LinkedIn Profile"></a>
+    </div>
   </section>
 
   <!-- ==================================================================== -->

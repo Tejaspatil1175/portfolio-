@@ -85,6 +85,68 @@ body {
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   transform: translateZ(0);
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-user-drag: none;
+  pointer-events: none;
+}
+
+/* Anti-copy image protection & interactive overlay */
+.hero-interactive-overlay {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 10;
+}
+
+.hero-hotspot {
+  position: absolute;
+  pointer-events: auto;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  transition: background-color 0.2s;
+}
+
+.hero-hotspot:hover {
+  background-color: rgba(163, 255, 18, 0.1);
+  box-shadow: 0 0 15px rgba(163, 255, 18, 0.2);
+}
+
+/* Hotspot positions */
+.hotspot-projects {
+  top: 48%;
+  left: 20%;
+  width: 50px;
+  height: 50px;
+}
+
+.hotspot-email {
+  bottom: 8%;
+  left: 5%;
+  width: 280px;
+  height: 45px;
+}
+
+.hotspot-github {
+  bottom: 3%;
+  right: 12%;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+}
+
+.hotspot-linkedin {
+  bottom: 3%;
+  right: 8%;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
 }
 
 /* Desktop vs Mobile Hero Toggle */
