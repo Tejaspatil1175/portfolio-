@@ -84,13 +84,43 @@ body {
   display: block;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
-  transform: translateZ(0);
   user-select: none;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   -webkit-user-drag: none;
   pointer-events: none;
+}
+
+/* Interactive Micro Pixel Dots / Grid Mesh Overlay (5x Smaller, Very Light Glow) */
+.hero-pixel-grid {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(8px, 1fr));
+  grid-template-rows: repeat(auto-fill, minmax(8px, 1fr));
+  pointer-events: auto;
+  z-index: 8;
+  overflow: hidden;
+}
+
+.pixel-cell {
+  width: 100%;
+  height: 100%;
+  border: 1px solid rgba(163, 255, 18, 0.008);
+  background-color: transparent;
+  border-radius: 1px;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
+}
+
+.pixel-cell:hover, .pixel-cell.active {
+  transform: scale(1.6) translateY(-1px);
+  background-color: rgba(163, 255, 18, 0.12);
+  border-color: rgba(163, 255, 18, 0.25);
+  box-shadow: 0 0 6px rgba(163, 255, 18, 0.18);
+  z-index: 15;
 }
 
 /* Anti-copy image protection & interactive overlay */
@@ -111,26 +141,6 @@ body {
   cursor: pointer;
   outline: none;
   transition: background-color 0.2s;
-}
-
-.hero-hotspot:hover {
-  background-color: rgba(163, 255, 18, 0.1);
-  box-shadow: 0 0 15px rgba(163, 255, 18, 0.2);
-}
-
-/* Hotspot positions */
-.hotspot-projects {
-  top: 48%;
-  left: 20%;
-  width: 50px;
-  height: 50px;
-}
-
-.hotspot-email {
-  bottom: 8%;
-  left: 5%;
-  width: 280px;
-  height: 45px;
 }
 
 .hotspot-github {

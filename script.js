@@ -101,4 +101,24 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
+  // 6. DYNAMIC HERO MICRO PIXEL GRID GENERATOR (5X SMALLER DENSE MICRO DOTS GRID)
+  const pixelGridContainer = document.getElementById("hero-pixel-grid");
+  if (pixelGridContainer) {
+    const totalCells = 2500;
+    const fragment = document.createDocumentFragment();
+
+    for (let i = 0; i < totalCells; i++) {
+      const cell = document.createElement("div");
+      cell.className = "pixel-cell";
+      cell.addEventListener("mouseenter", () => {
+        cell.classList.add("active");
+        setTimeout(() => {
+          cell.classList.remove("active");
+        }, 500);
+      });
+      fragment.appendChild(cell);
+    }
+    pixelGridContainer.appendChild(fragment);
+  }
+
 });
